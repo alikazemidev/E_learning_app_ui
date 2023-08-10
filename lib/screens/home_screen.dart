@@ -1,4 +1,6 @@
 import 'package:e_learning_app/constants/colors.dart';
+import 'package:e_learning_app/widgets/emoji_text.dart';
+import 'package:e_learning_app/widgets/search_input.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,7 +10,16 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _buildAppBar(),
-      body: const Center(child: Text('ali kz')),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            EmojiText(),
+            SearchInput(),
+          ],
+        ),
+      ),
     );
   }
 
@@ -42,8 +53,7 @@ class HomePage extends StatelessWidget {
               right: 23,
               child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(50)),
+                    color: Colors.red, borderRadius: BorderRadius.circular(50)),
                 width: 5,
                 height: 5,
               ),
