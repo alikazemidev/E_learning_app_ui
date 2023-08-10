@@ -24,6 +24,15 @@ class MyApp extends StatelessWidget {
           fontSize: 26,
           fontWeight: FontWeight.bold,
         ),
+        bodyMedium: TextStyle(
+          color: kFontColor,
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
+        bodySmall: TextStyle(
+          color: kFontLightColor,
+          fontSize: 16,
+          ),
       )),
       home: HomePage(),
     );

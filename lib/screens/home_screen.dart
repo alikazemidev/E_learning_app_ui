@@ -1,4 +1,5 @@
 import 'package:e_learning_app/constants/colors.dart';
+import 'package:e_learning_app/widgets/category_title.dart';
 import 'package:e_learning_app/widgets/emoji_text.dart';
 import 'package:e_learning_app/widgets/search_input.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,10 @@ class HomePage extends StatelessWidget {
           children: [
             EmojiText(),
             SearchInput(),
+            CategoryTitle(
+              leftText: 'Top of the week',
+              rightText: 'view all',
+            ),
           ],
         ),
       ),
