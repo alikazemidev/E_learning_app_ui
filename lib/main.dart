@@ -29,10 +29,19 @@ class MyApp extends StatelessWidget {
           fontSize: 20,
           fontWeight: FontWeight.bold,
         ),
+        displayMedium: TextStyle(
+          color: kFontColor,
+          fontWeight: FontWeight.bold,
+          fontSize: 18,
+        ), displaySmall: TextStyle(
+          color: kFontLightColor,
+          fontWeight: FontWeight.bold,
+          fontSize: 14,
+        ),
         bodySmall: TextStyle(
           color: kFontLightColor,
           fontSize: 16,
-          ),
+        ),
       )),
       home: HomePage(),
     );

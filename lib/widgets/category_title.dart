@@ -28,7 +28,7 @@ class CategoryTitle extends StatelessWidget {
               rightText,
               style: textStyle.bodySmall,
             ),
-          )
+          ),
         ],
       ),
     );

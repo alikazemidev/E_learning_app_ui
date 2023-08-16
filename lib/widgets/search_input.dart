@@ -17,9 +17,10 @@ class SearchInput extends StatelessWidget {
               fillColor: kFontLightColor.withOpacity(0.1),
               border: InputBorder.none,
               contentPadding: EdgeInsets.all(18),
-              hintText: 'search for history,classes,...',
+              hintText: 'search for history,classes...',
               hintStyle: TextStyle(
                 color: kFontLightColor,
+                fontSize: 14,
               ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
