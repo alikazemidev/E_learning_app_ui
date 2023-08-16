@@ -28,7 +28,7 @@ class Course {
       author: 'babak z',
       authorImage: "assets/icons/avatar03.png",
       title: 'Course 1',
-      imageUrl: "assets/course03.png",
+      imageUrl: "assets/images/course01.png",
     ),
   ];
 }

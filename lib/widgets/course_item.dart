@@ -3,7 +3,10 @@ import 'package:e_learning_app/models/course.dart';
 import 'package:flutter/material.dart';
 
 class CourseItem extends StatelessWidget {
-  var course = Course.courseList[0];
+  final int indexItem;
+
+CourseItem({super.key, required this.indexItem});
+
   @override
   Widget build(BuildContext context) {
     var textStyle = Theme.of(context).textTheme;
@@ -27,7 +30,7 @@ class CourseItem extends StatelessWidget {
                       topLeft: Radius.circular(20),
                     ),
                     child: Image.asset(
-                      course.imageUrl,
+                      Course.courseList[indexItem].imageUrl,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -44,14 +47,14 @@ class CourseItem extends StatelessWidget {
                             ClipRRect(
                               borderRadius: BorderRadius.circular(100),
                               child: Image.asset(
-                                course.authorImage,
+                                 Course.courseList[indexItem].authorImage,
                                 width: 20,
                                 height: 20,
                               ),
                             ),
                             SizedBox(width: 5),
                             Text(
-                              course.author,
+                               Course.courseList[indexItem].author,
                               style: textStyle.bodyMedium,
                             ),
                           ],
@@ -60,7 +63,7 @@ class CourseItem extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              course.title,
+                               Course.courseList[indexItem].title,
                               style: textStyle.displayMedium,
                             ),
                             Container(
@@ -92,12 +95,10 @@ class CourseItem extends StatelessWidget {
             right: 20,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor:kAccentColor,
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10)
-              ) 
-              ),
+                  backgroundColor: kAccentColor,
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10))),
               onPressed: () {},
               child: Text('start'),
             ),
